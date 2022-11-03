@@ -1,9 +1,9 @@
 import { Items } from '../components/Items'
 
-export function HomePage() {
+export function HomePage({ productItems, handleAddProduct }) {
 	return (
 		<div>
-			<Items />
+			<Items productItems={productItems} handleAddProduct={handleAddProduct} />
 		</div>
 	)
 }

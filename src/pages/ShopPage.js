@@ -1,9 +1,9 @@
 import { ShoppingCart } from '../components/ShoppingCart'
 
-export function ShopPage() {
+export function ShopPage({ cartItems }) {
 	return (
 		<div>
-			<ShoppingCart />
+			<ShoppingCart cartItems={cartItems} />
 		</div>
 	)
 }
