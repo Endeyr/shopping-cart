@@ -1,5 +1,4 @@
 export function ShoppingCart({ cartItems }) {
-	console.log(cartItems)
 	return (
 		<div>
 			<div>Cart Items</div>

@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import data from './components/Data'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
+import CartContext from './context/CartContext'
 import { HomePage } from './pages/HomePage'
 import { ShopPage } from './pages/ShopPage'
 
@@ -11,18 +12,21 @@ function App() {
 	const [cartItems, setCartItems] = useState([])
 	const { productItems } = data
 
+	useEffect(() => {}, [])
+
+	/*
 	function handleAddProduct(product) {
 		const ProductExist = cartItems.find((item) => item.id === product.id)
 		if (ProductExist) {
 			setCartItems(
 				cartItems.map((item) => item.id === product.id)
 					? { ...ProductExist, quantity: ProductExist.quantity + 1 }
-					: product
+					: item
 			)
 		} else {
 			setCartItems([...cartItems, { ...product, quantity: 1 }])
 		}
-	}
+	} */
 
 	return (
 		<main className="container-fluid">
@@ -34,7 +38,7 @@ function App() {
 						element={
 							<HomePage
 								productItems={productItems}
-								handleAddProduct={handleAddProduct}
+								/* handleAddProduct={handleAddProduct} */
 							/>
 						}
 					/>
