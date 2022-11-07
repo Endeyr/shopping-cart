@@ -17,7 +17,7 @@ export function Items({ productItems, handleAddProduct }) {
 								<p className="fs-4 mb-0">${productItem.price}</p>
 								<button
 									className="btn btn-primary"
-									/* onClick={handleAddProduct(productItem)} */
+									onClick={() => handleAddProduct(productItem)}
 								>
 									Add to Cart
 								</button>

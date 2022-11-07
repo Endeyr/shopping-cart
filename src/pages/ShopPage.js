@@ -1,9 +1,13 @@
 import { ShoppingCart } from '../components/ShoppingCart'
 
-export function ShopPage({ cartItems }) {
+export function ShopPage({ cartItems, handleAddProduct, handleRemoveProduct }) {
 	return (
 		<div>
-			<ShoppingCart cartItems={cartItems} />
+			<ShoppingCart
+				cartItems={cartItems}
+				handleAddProduct={handleAddProduct}
+				handleRemoveProduct={handleRemoveProduct}
+			/>
 		</div>
 	)
 }
