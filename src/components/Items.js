@@ -2,10 +2,10 @@ export function Items({ productItems, handleAddProduct }) {
 	const myImgStyle = { width: '14rem', height: '90%' }
 
 	return (
-		<div className="container">
-			<div className="row row-cols-1 row-cols-md-3 g-4 mb-3 mt-2">
+		<div className="container-fluid">
+			<div className="row row-cols-1 row-cols-md-6 g-4 mb-3 mt-2">
 				{productItems.map((productItem) => (
-					<div className="col">
+					<div className="col" key={productItem.id}>
 						<div className="card mb-1 ms-1 text-bg-dark" style={myImgStyle}>
 							<img
 								src={productItem.image}
