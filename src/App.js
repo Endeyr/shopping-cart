@@ -45,6 +45,11 @@ function App() {
 		setCartItems([])
 	}
 
+	function handleOrder() {
+		setCartItems([])
+		alert('Thank you for your order!')
+	}
+
 	return (
 		<main className="container-fluid">
 			<BrowserRouter>
@@ -67,6 +72,7 @@ function App() {
 								handleAddProduct={handleAddProduct}
 								handleRemoveProduct={handleRemoveProduct}
 								handleCartClearance={handleCartClearance}
+								handleOrder={handleOrder}
 							/>
 						}
 					/>

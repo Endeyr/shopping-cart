@@ -5,6 +5,7 @@ export function ShopPage({
 	handleAddProduct,
 	handleRemoveProduct,
 	handleCartClearance,
+	handleOrder,
 }) {
 	return (
 		<div>
@@ -13,6 +14,7 @@ export function ShopPage({
 				handleAddProduct={handleAddProduct}
 				handleRemoveProduct={handleRemoveProduct}
 				handleCartClearance={handleCartClearance}
+				handleOrder={handleOrder}
 			/>
 		</div>
 	)

@@ -3,6 +3,7 @@ export function ShoppingCart({
 	handleAddProduct,
 	handleRemoveProduct,
 	handleCartClearance,
+	handleOrder,
 }) {
 	const totalPrice = cartItems.reduce(
 		(price, item) => price + item.quantity * item.price,
@@ -61,6 +62,13 @@ export function ShoppingCart({
 				))}
 			</div>
 			<div className="text-center">Total Price: ${totalPrice}</div>
+			<div className="text-center">
+				{cartItems.length >= 1 && (
+					<button className="btn btn-primary" onClick={() => handleOrder()}>
+						Order
+					</button>
+				)}
+			</div>
 		</div>
 	)
 }
